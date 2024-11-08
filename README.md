@@ -18,8 +18,8 @@ This project aims to predict the likelihood of heart disease using various machi
 ## Features
 - Predicts the likelihood of heart disease based on user inputs.
 - Compares multiple machine learning algorithms (Random Forest, Decision Tree, Logistic Regression, K-Nearest Neighbors).
-- Real-time risk prediction with user-friendly web interface using Flask.
-- Interactive visualizations for prediction results (e.g., pie chart showing risk distribution).
+- Real-time risk prediction with a user-friendly web interface using Flask.
+- Interactive visualizations for prediction results.
 
 ## Installation
 
@@ -83,12 +83,12 @@ heart-disease-prediction/
 │   └── result.html        # Result display template
 ├── static/
 │   └── style.css          # CSS styling for the web app
-
+             # Project documentation
 ```
 
 ## Technologies Used
 - **Programming Language**: Python 3.x
-- **Machine Learning**: sci-kit-learn
+- **Machine Learning**: scikit-learn
 - **Web Framework**: Flask
 - **Frontend**: HTML, CSS, JavaScript (with Chart.js for visualizations)
 - **Data Processing**: Pandas, NumPy
@@ -112,5 +112,5 @@ Contributions are welcome! If you'd like to improve this project, please fork th
 4. Push to the branch (`git push origin feature/NewFeature`)
 5. Open a pull request
 
-## License(LICENSE)
-This project is licensed under the MIT License.
+## License
+This project is licensed under the [MIT License](LICENSE).
