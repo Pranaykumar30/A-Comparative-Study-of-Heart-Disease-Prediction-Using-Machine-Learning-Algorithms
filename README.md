@@ -112,5 +112,5 @@ Contributions are welcome! If you'd like to improve this project, please fork th
 4. Push to the branch (`git push origin feature/NewFeature`)
 5. Open a pull request
 
-## License
+## License(LICENSE)
 This project is licensed under the MIT License.
