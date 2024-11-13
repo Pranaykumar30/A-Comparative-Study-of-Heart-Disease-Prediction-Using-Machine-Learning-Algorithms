@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function validateForm() {
+            // Get all input fields
+            const inputs = document.querySelectorAll('input[type="number"]');
+            let allFilled = true;
+
+            // Check if each input field is filled
+            inputs.forEach(input => {
+                if (input.value.trim() === '') {
+                    allFilled = false;
+                }
+            });
+
+            // If any field is empty, show an alert and prevent form submission
+            if (!allFilled) {
+                alert('Please fill all the fields before predicting.');
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('predict') }}">Predict</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Predict Heart Disease</h1>
+        <form method="POST" onsubmit="return validateForm();">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age"><br><br>
+            <label for="sex">Sex:</label>
+            <input type="number" id="sex" name="sex"><br><br>
+            <label for="cp">Chest Pain:</label>
+            <input type="number" id="cp" name="cp"><br><br>
+            <label for="trestbps">Resting Blood Pressure:</label>
+            <input type="number" id="trestbps" name="trestbps"><br><br>
+            <label for="chol">Serum Cholesterol:</label>
+            <input type="number" id="chol" name="chol"><br><br>
+            <label for="fbs">Fasting Blood Sugar:</label>
+            <input type="number" id="fbs" name="fbs"><br><br>
+            <label for="restecg">Resting Electrocardiogram:</label>
+            <input type="number" id="restecg" name="restecg"><br><br>
+            <label for="thalach">Maximum Heart Rate:</label>
+            <input type="number" id="thalach" name="thalach"><br><br>
+            <label for="exang">Exercise Induced Angina:</label>
+            <input type="number" id="exang" name="exang"><br><br>
+            <label for="oldpeak">ST Depression:</label>
+            <input type="number" id="oldpeak" name="oldpeak"><br><br>
+            <label for="slope">Slope of Peak Exercise ST Segment:</label>
+            <input type="number" id="slope" name="slope"><br><br>
+            <label for="ca">Number of Major Vessels:</label>
+            <input type="number" id="ca" name="ca"><br><br>
+            <label for="thal">Thalassemia:</label>
+            <input type="number" id="thal" name="thal"><br><br>
+            <input type="submit" value="Predict">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Heart Disease Prediction</p>
+    </footer>
+</body>
+</html>
